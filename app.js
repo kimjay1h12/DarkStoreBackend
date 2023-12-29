@@ -9,6 +9,7 @@ const productionRoutes = require("./routes/productsRoutes");
 const cartRouter = require('./routes/cartRoutes');
 const brandRouter = require('./routes/brandRoutes');
 const categoryRouter = require('./routes/categoryRoutes');
+const searchRouter = require('./routes/searchRoutes');
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(cors())
@@ -17,6 +18,7 @@ app.use("/",productionRoutes)
 app.use("/",cartRouter)
 app.use("/",brandRouter)
 app.use("/",categoryRouter)
+app.use("/",searchRouter)
 
 
 app.listen(port,()=>{
