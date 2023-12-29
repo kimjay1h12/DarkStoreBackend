@@ -48,3 +48,19 @@ exports.updateProduct = async(req, res) => {
         res.status(500).json({message: "error updating product", error: error})
     }
 }
+exports.getProductByBrand = async(req,res)=>{
+    try {
+        const products = await Products.find({brand: req.params.brand})
+        res.status(200).json({message: "success", data: products})
+    } catch (error) {
+        res.status(500).json({message: "error getting products", error: error})
+    }
+}
+exports.getProductByCategory = async(req,res)=>{
+    try {
+        const products = await Products.find({category: req.params.category})
+        res.status(200).json({message: "success", data: products})
+    } catch (error) {
+        res.status(500).json({message: "error getting products", error: error})
+    }
+}

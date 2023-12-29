@@ -8,4 +8,6 @@ productRouter.route("/products").get(productController.getAllProducts)
 productRouter.route("/products/:id").get(productController.getProductById)
 productRouter.route("/products/:id").delete(AuthorizationValidation, IsAdminValidation,productController.deleteProduct)
 productRouter.route("/products/:id").patch(AuthorizationValidation,IsAdminValidation,productController.updateProduct)
+productRouter.route("/products/brand/:brand").get(productController.getProductByBrand)
+productRouter.route("/products/category/:category").get(productController.getProductByCategory)
 module.exports = productRouter
