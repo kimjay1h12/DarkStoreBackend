@@ -9,7 +9,7 @@ exports.createOrder = async (req, res) => {
     const user = jwt.verify(token, "d1CpSArCGc2fYw1VZ7uxG");
 
     const userDetails = await User.findById(user.id);
-
+console.log(userDetails)
     if (!userDetails) {
       return res.status(404).json({ message: "User not found" });
     }
