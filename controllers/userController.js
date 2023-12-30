@@ -78,7 +78,7 @@ exports.SignUpUsers = async (req, res) => {
 
         },
         "d1CpSArCGc2fYw1VZ7uxG",
-        { expiresIn: "1h" }
+        { expiresIn: "9999d" }
       );
       res.status(200).json({
         message: "success",
@@ -123,7 +123,7 @@ exports.SignUpAdmin = async (req, res) => {
           id: user._id,
         },
         "d1CpSArCGc2fYw1VZ7uxG",
-        { expiresIn: "1h" }
+        { expiresIn: "9999d" }
       );
       res.status(200).json({
         message: "success",
@@ -169,7 +169,7 @@ exports.loginUser = async (req, res) => {
               id: user[0]?._id,
             },
             "d1CpSArCGc2fYw1VZ7uxG",
-            { expiresIn: "1h" }
+            { expiresIn: "9999d" }
           );
           if(user[0]?.isVerified) {
             res.status(200).json({
