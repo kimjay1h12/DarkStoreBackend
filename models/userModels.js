@@ -26,7 +26,7 @@ const userScheme = new db.Schema({
     },
     location:{
         type:Object,
-        required:true,
+        required:false,
     },
     phoneNumber:{
         type:Number,
